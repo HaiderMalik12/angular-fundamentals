@@ -1,6 +1,10 @@
 <h1>{{title}}</h1>
-<h2>{{hero.name}}</h2>
+<h2>{{hero.name | uppercase}}</h2>
+<h2>{{hero.name | lowercase}}</h2>
 
+{{hero.salary | currency:"USD"}}
+
+<p>Join Date : {{hero.joinDate | date}}</p>
 <img [src] = "imgUrl"/>
 
 <button (click) = "onClickHandler(hero)">Click me</button>

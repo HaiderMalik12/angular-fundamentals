@@ -7,7 +7,7 @@ import {Component } from '@angular/core';
 })
 export class HeroComponent {
 title = 'My Hero Component';
-hero = { name: 'Jane Doe'};
+hero = { name: 'Jane Doe', salary: 5000.34, joinDate: new Date()};
 imgUrl = "https://angular.io/generated/images/guide/architecture/parent-child-binding.png";
 
 onClickHandler(hero){
