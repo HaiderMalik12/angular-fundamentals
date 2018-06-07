@@ -11,6 +11,9 @@ import { Hero } from '../hero';
         <li *ngFor="let hero of heroes">{{hero.name}} </li>
        </ul>
        <p *ngIf="heroes.length > 3"> There are more heros </p>
+
+       <h2> Interpolation </h2>
+       {{1 + 1}}
     </div>
   `,
   styleUrls: ['./hero-list.component.css']
@@ -25,6 +28,9 @@ export class HeroListComponent implements OnInit {
    new Hero(3, 'Kevin'),
    new Hero(4, 'Lane'),
   ]
+  getValue(){
+    return 10;
+  }
   constructor() {
     this.myHero = this.heroes[0]
     this.title = 'Hero List'
