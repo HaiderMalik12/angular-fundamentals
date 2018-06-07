@@ -5,15 +5,18 @@ import { Hero } from '../hero';
   selector: 'app-hero-list',
   template: `
     <div>
-       <h1>{{title}} </h1>
-       <h3>{{myHero.name}} </h3>
-       <ul>
-        <li *ngFor="let hero of heroes">{{hero.name}} </li>
-       </ul>
-       <p *ngIf="heroes.length > 3"> There are more heros </p>
+    <p> Helooasdasd {{title}}
 
-       <h2> Interpolation </h2>
-       {{1 + 1}}
+    asdjlhasdj
+
+    {{title}}
+
+    akjsdkjasdh
+
+    {{title}}
+    </p>
+      <img src= "{{imageUrl}}"/>
+      <img [src] = "imageUrl"/>
     </div>
   `,
   styleUrls: ['./hero-list.component.css']
@@ -21,19 +24,10 @@ import { Hero } from '../hero';
 export class HeroListComponent implements OnInit {
 
   title: string;
-  myHero : Hero
-  heroes = [
-   new Hero(1, 'Jane'),
-   new Hero(2, 'Doe'),
-   new Hero(3, 'Kevin'),
-   new Hero(4, 'Lane'),
-  ]
-  getValue(){
-    return 10;
-  }
+  imageUrl:string;
   constructor() {
-    this.myHero = this.heroes[0]
     this.title = 'Hero List'
+    this.imageUrl = 'http://lorempixel.com/400/200'
    }
 
   ngOnInit() {
