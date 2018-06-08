@@ -5,7 +5,7 @@ import { Hero } from '../hero';
   selector: 'app-hero-list',
   template: `
   <p>{{title}} </p>
-  <input (keyup.enter) = "onKeyUp()"/>
+  <input #name  (keyup.enter) = "onKeyUp(name.value)"/>
   `,
   styleUrls: ['./hero-list.component.css']
 })
@@ -14,8 +14,8 @@ export class HeroListComponent implements OnInit {
   constructor() {
     this.title = 'Hero List'
    }
-   onKeyUp(){
-     console.log('Enter pressed')
+   onKeyUp(name){
+     console.log('Enter pressed', name)
    }
   ngOnInit() {
   }
