@@ -5,13 +5,13 @@ import { Hero } from '../hero';
   selector: 'app-hero-list',
   template: `
   <p>{{title}} </p>
-  <button class="btn" [class.btn-primary] = "isPrimary"> Submit </button>
+  <button [style.color] = "isActive ? 'blue' : 'red' "> Submit </button>
   `,
   styleUrls: ['./hero-list.component.css']
 })
 export class HeroListComponent implements OnInit {
   title: string;
-  isPrimary = true;
+  isActive = false;
   constructor() {
     this.title = 'Hero List'
    }
