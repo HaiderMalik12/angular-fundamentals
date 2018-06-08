@@ -5,15 +5,17 @@ import { Hero } from '../hero';
   selector: 'app-hero-list',
   template: `
   <p>{{title}} </p>
-  <button [style.color] = "isActive ? 'blue' : 'red' "> Submit </button>
+  <button class ="btn btn-primary" (click) ="onSubmit($event)"> Submit </button>
   `,
   styleUrls: ['./hero-list.component.css']
 })
 export class HeroListComponent implements OnInit {
   title: string;
-  isActive = false;
   constructor() {
     this.title = 'Hero List'
+   }
+   onSubmit($event){
+     console.log('Submitted ', $event)
    }
 
   ngOnInit() {
