@@ -5,7 +5,7 @@ import { Hero } from '../hero';
   selector: 'app-hero-list',
   template: `
   <p>{{title}} </p>
-  <button class ="btn btn-primary" (click) ="onSubmit($event)"> Submit </button>
+  <input (keyup.enter) = "onKeyUp()"/>
   `,
   styleUrls: ['./hero-list.component.css']
 })
@@ -14,10 +14,9 @@ export class HeroListComponent implements OnInit {
   constructor() {
     this.title = 'Hero List'
    }
-   onSubmit($event){
-     console.log('Submitted ', $event)
+   onKeyUp(){
+     console.log('Enter pressed')
    }
-
   ngOnInit() {
   }
 
