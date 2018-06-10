@@ -4,11 +4,7 @@ import { Hero } from '../hero';
 @Component({
   selector: 'app-hero-list',
   template: `
-  <p> {{hero.name | uppercase}} </p>
-  <p> {{hero.salary | currency}} </p>
-  <p> {{hero.rating | number}} </p>
-  <p> {{hero.joinDate | date:'shortDate'}} </p>
-
+  <app-hero-detail [hero] = "myHero"> </app-hero-detail>
   `,
   styleUrls: ['./hero-list.component.css']
 })
@@ -28,10 +24,10 @@ export class HeroListComponent implements OnInit {
     salary: 53234.9,
     joinDate: new Date()
   }]
-  hero: Hero;
+  myHero: Hero;
   constructor() {
     this.title = 'Hero List'
-    this.hero = this.heroes[0];
+    this.myHero = this.heroes[0];
    }
   ngOnInit() {
   }
