@@ -14,14 +14,24 @@ import { Hero } from '../hero';
 })
 export class HeroListComponent implements OnInit {
   title: string;
-  hero = {
+  heroes: Hero[] = [{
+    id: 1,
     rating: 3.45230,
     name : 'Jane',
     salary: 23234.9,
     joinDate: new Date()
-  }
+  },
+  {
+    id: 2,
+    rating: 4.45230,
+    name : 'Doe',
+    salary: 53234.9,
+    joinDate: new Date()
+  }]
+  hero: Hero;
   constructor() {
     this.title = 'Hero List'
+    this.hero = this.heroes[0];
    }
   ngOnInit() {
   }
