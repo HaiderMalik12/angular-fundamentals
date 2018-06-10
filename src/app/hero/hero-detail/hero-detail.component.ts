@@ -15,4 +15,8 @@ export class HeroDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteHero(){
+    console.log('delete hero clicked');
+  }
+
 }

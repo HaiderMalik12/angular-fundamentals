@@ -1,5 +1,11 @@
+
+
+<h3>Hero Details</h3>
 <p> Hero Id {{hero.id}}</p>
 <p> {{hero.name | uppercase}} </p>
 <p> {{hero.salary | currency}} </p>
 <p> {{hero.rating | number}} </p>
 <p> {{hero.joinDate | date:'shortDate'}} </p>
+
+
+<button class="btn btn-danger" (click) ="deleteHero()"> Delete Hero</button>

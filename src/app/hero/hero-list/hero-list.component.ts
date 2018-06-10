@@ -4,6 +4,9 @@ import { Hero } from '../hero';
 @Component({
   selector: 'app-hero-list',
   template: `
+  <h3>Hero List </h3>
+  <li *ngFor = "let hero of heroes" > {{hero.name}}</li>
+  <br>
   <app-hero-detail [myHero] = "myHero"> </app-hero-detail>
   `,
   styleUrls: ['./hero-list.component.css']
