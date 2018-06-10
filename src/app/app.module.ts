@@ -8,13 +8,15 @@ import { HeroService } from './hero/hero.service';
 import { Logger } from './logger.service';
 import { HeroListComponent } from './hero/hero-list/hero-list.component';
 import { HeroDetailComponent } from './hero/hero-detail/hero-detail.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
     HeroListComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
