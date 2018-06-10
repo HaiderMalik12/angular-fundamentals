@@ -7,7 +7,7 @@ import { Hero } from '../hero';
   <h3>Hero List </h3>
   <li *ngFor = "let hero of heroes" > {{hero.name}}</li>
   <br>
-  <app-hero-detail [myHero] = "myHero" (change) = "onDeleteHandler($event)"> </app-hero-detail>
+  <app-hero-detail [myHero] = "myHero" (myChange) = "onDeleteHandler($event)"> </app-hero-detail>
   `,
   styleUrls: ['./hero-list.component.css']
 })

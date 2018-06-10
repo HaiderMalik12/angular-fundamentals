@@ -10,7 +10,7 @@ export class HeroDetailComponent implements OnInit {
 
   @Input('myHero')
   hero: Hero
-  @Output()
+  @Output('myChange')
   change = new EventEmitter();
   constructor() { }
 
