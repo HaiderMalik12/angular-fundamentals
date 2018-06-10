@@ -4,7 +4,7 @@ import { Hero } from '../hero';
 @Component({
   selector: 'app-hero-list',
   template: `
-  <app-hero-detail [hero] = "myHero"> </app-hero-detail>
+  <app-hero-detail [myHero] = "myHero"> </app-hero-detail>
   `,
   styleUrls: ['./hero-list.component.css']
 })
