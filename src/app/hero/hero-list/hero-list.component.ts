@@ -34,8 +34,9 @@ export class HeroListComponent implements OnInit {
    }
   ngOnInit() {
   }
-  onDeleteHandler(eventArgs){
-    console.log(eventArgs)
+  onDeleteHandler(hero: Hero){
+    const index = this.heroes.findIndex(item => item.id === hero.id );
+    this.heroes.splice(index, 1);
   }
 
 }

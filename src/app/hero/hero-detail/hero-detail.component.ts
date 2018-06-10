@@ -18,7 +18,7 @@ export class HeroDetailComponent implements OnInit {
   }
 
   deleteHero(){
-    this.change.emit('Change Emitted');
+    this.change.emit(this.hero);
   }
 
 }
