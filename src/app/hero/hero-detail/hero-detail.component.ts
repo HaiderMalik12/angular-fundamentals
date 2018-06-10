@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Hero } from '../hero';
 
 @Component({
@@ -10,13 +10,15 @@ export class HeroDetailComponent implements OnInit {
 
   @Input('myHero')
   hero: Hero
+  @Output()
+  change = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
   deleteHero(){
-    console.log('delete hero clicked');
+    this.change.emit('Change Emitted');
   }
 
 }
