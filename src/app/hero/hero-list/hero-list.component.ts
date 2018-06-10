@@ -5,7 +5,7 @@ import { Hero } from '../hero';
   selector: 'app-hero-list',
   template: `
   <h3>Hero List </h3>
-  <li *ngFor = "let hero of heroes" > {{hero.name}}</li>
+  <p *ngFor = "let hero of heroes" > {{hero.name}}</p>
   <br>
   <app-hero-detail [myHero] = "myHero" (myChange) = "onDeleteHandler($event)"> </app-hero-detail>
   `,
