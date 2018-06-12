@@ -1,18 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
+  <ul *ngFor="let person of people">
+    <li *ngIf="person.country ==='UK'" class="text-success">{{ person.name }} ({{ person.country }})
+    </li>
+    <li *ngIf="person.country === 'USA'"
+        class="text-primary">{{ person.name }} ({{ person.country }})
+    </li>
+    <li *ngIf="person.country === 'HK'"
+        class="text-danger">{{ person.name }} ({{ person.country }})
+    </li>
+    <li *ngIf="person.country !== 'HK' && person.country !== 'UK' && person.country !== 'USA'"
+        class="text-warning">{{ person.name }} ({{ person.country }})
+    </li>
+  </ul>
 
-
-<!-- <app-hero></app-hero> -->
-<!-- <app-hero-list></app-hero-list> -->
-
-<app-card>
-  <div class="heading">
-    <img class="card-img-top" src="https://picsum.photos/g/200/300" alt="Card image cap">
-  </div>
-  <div class="body">
-    <h5 class="card-title">Card Title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</app-card>
 </div>
