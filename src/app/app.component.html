@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <ul *ngFor="let person of people">
+<h4>List of People</h4>
+<!-- <ul *ngFor="let person of people">
     <li *ngIf="person.country ==='UK'" class="text-success">{{ person.name }} ({{ person.country }})
     </li>
     <li *ngIf="person.country === 'USA'"
@@ -12,6 +12,37 @@
     <li *ngIf="person.country !== 'HK' && person.country !== 'UK' && person.country !== 'USA'"
         class="text-warning">{{ person.name }} ({{ person.country }})
     </li>
+  </ul> -->
+
+  <ul *ngFor="let person of people"
+   [ngSwitch] = "person.country">
+
+   <li *ngSwitchCase= "'UK'"
+   class="text-success">
+   {{ person.name }} ({{ person.country }})
+   </li>
+
+
+   <li *ngSwitchCase= "'USA'"
+   class="text-primary">
+   {{ person.name }} ({{ person.country }})
+   </li>
+
+
+   <li *ngSwitchCase= "'HK'"
+   class="text-danger">
+   {{ person.name }} ({{ person.country }})
+   </li>
+
+   <li *ngSwitchCase= "'HK'"
+   class="text-warning">
+   {{ person.name }} ({{ person.country }})
+   </li>
+
+   <li *ngSwitchDefault
+      class="text-warning">
+    {{ person.name }} ({{ person.country }})
+  </li>
+
   </ul>
 
-</div>
